@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="/Users/jameswhiteman/Desktop/twitter4j-4.0.1/lib/twitter4j-core-4.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/jameswhiteman/Desktop/apache-mime4j-0.7.2/apache-mime4j-core-0.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/jameswhiteman/Desktop/httpcomponents-client-4.3.3/lib/httpclient-4.3.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/jameswhiteman/Desktop/httpcomponents-client-4.3.3/lib/httpcore-4.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/jameswhiteman/Desktop/httpcomponents-client-4.3.3/lib/httpmime-4.3.3.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

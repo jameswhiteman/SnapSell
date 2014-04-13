@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Strings -->
+    <string name="appName">SnapSell</string>
+    
+    <!-- Activity Titles -->
+    <string name="activityLogin">Login</string>
+    <string name="activityLocation">Location</string>
+    <string name="activityCategories">Categories</string>
+    <string name="activitySell">Sell</string>
+    <string name="activityListings">Listings</string>
+    <string name="activityListing">Buy</string>
+
+    <!-- Menu Items -->
+    <string name="menuLoginSettings">Settings</string>
+
+    <!-- Login -->
+    <string name="loginButtonTwitter">Login with Twitter</string>
+    
+    <!-- Categories -->
+    <string name="categoriesTextDefault">Test Category</string>
+    <string name="categoriesSwitchBuy">What would you like to do?</string>
+    <string name="gridItemCategoryDescriptionMain">Category Image</string>
+    
+    <!-- Listings -->
+    <string name="gridItemListingTextDefault">Item</string>
+    <string name="gridItemListingDescriptionMain">Listing</string>
+
+</resources>

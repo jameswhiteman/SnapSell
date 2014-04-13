@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.snapsell.activities.SnapCategories$PlaceholderFragment" >
+    <!-- 
+    <Button
+        android:id="@+id/categoriesButtonBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Buy" />
+
+    <Button
+        android:id="@+id/categoriesButtonSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/categoriesButtonBuy"
+        android:text="Sell" />
+        -->
+    
+    <Switch
+        android:id="@+id/categoriesSwitchBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="20dp"
+        android:text="@string/categoriesSwitchBuy" />
+    
+    <GridView
+        android:id="@+id/categoriesGridOptions"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/categoriesSwitchBuy"
+        android:layout_alignParentLeft="true" >
+ 
+</GridView>
+
+</RelativeLayout>

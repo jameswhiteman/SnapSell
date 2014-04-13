@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.snapsell.activities"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appName"
+        android:theme="@style/AppTheme" >
+
+        <!-- Login Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapLogin"
+            android:label="@string/activityLogin" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Location Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapLocation"
+            android:label="@string/activityLocation" />
+        
+         <!-- Categories Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapCategories"
+            android:label="@string/activityCategories" />
+        
+        <!-- Listings Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapListings"
+            android:label="@string/activityListings" />
+        
+        <!-- Listing Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapListing"
+            android:label="@string/activityListing" />
+        
+        <!-- Selling Activity -->
+        <activity
+            android:name="com.snapsell.activities.SnapSell"
+            android:label="@string/activitySell" />
+        <!-- 
+            android:parentActivityName="com.snapsell.activities.SnapLogin">
+            <meta-data 
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.snapsell.activities.SnapLogin" />
+        </activity> -->
+    </application>
+
+</manifest>
