@@ -44,7 +44,7 @@ public class ListingsTask extends AsyncTask<String, Void, List<Listing>>
 			
 			HttpResponse response = client.execute(get);
 			//String json = EntityUtils.toString(response.getEntity());
-			String json = "{\"listings\":[{\"picture\":\"\",\"bought\":false,\"user\":{\"name\":\"James\",\"_id\":\"83\"},\"_id\":\"534a64a42ab6228030fbaa43\",\"__v\":0,\"message\":[]},{\"picture\":\"\",\"bought\":false,\"user\":{\"name\":\"John\",\"_id\":\"29\"},\"_id\":\"534a64b72ab6228030fbaa44\",\"__v\":0,\"message\":[]},{\"picture\":\"\",\"bought\":false,\"user\":{\"name\":\"Chad\",\"_id\":\"928\",},\"_id\":\"534a64d52ab6228030fbaa45\",\"__v\":0,\"message\":[]}]}";
+			String json = "{\"listings\":[{\"picture\":\"\",\"bought\":\"false\",\"user\":{\"name\":\"James\",\"_id\":\"83\"},\"_id\":\"534a64a42ab6228030fbaa43\",\"__v\":0,\"message\":[]},{\"picture\":\"\",\"bought\":\"false\",\"user\":{\"name\":\"John\",\"_id\":\"29\"},\"_id\":\"534a64b72ab6228030fbaa44\",\"__v\":0,\"message\":[]},{\"picture\":\"\",\"bought\":\"false\",\"user\":{\"name\":\"Chad\",\"_id\":\"928\",},\"_id\":\"534a64d52ab6228030fbaa45\",\"__v\":0,\"message\":[]}]}";
 			JsonParser parser = new JsonParser();
 			listings = parser.parseListings(json);
 			System.out.println("JSON:" + json + ";");

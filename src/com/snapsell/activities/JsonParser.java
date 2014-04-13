@@ -19,8 +19,8 @@ public class JsonParser
 		ArrayList<Listing> listings = new ArrayList<Listing>();
 		try
 		{
-//			JSONObject object = new JSONObject(json);
-			JSONArray rawListings = new JSONArray("listings");
+			JSONObject object = new JSONObject(json);
+			JSONArray rawListings = object.getJSONArray("listings");
 			for (int i = 0; i < rawListings.length(); i++)
 			{
 				String rawListing = rawListings.getString(i);

@@ -79,7 +79,8 @@ public class SnapLogin extends ActionBarActivity {
 					{
 						//ServerCommunication comm = new ServerCommunication();
 						//comm.execute("hey");
-
+						LoginTask login = new LoginTask();
+						login.execute();
 						Intent intent = new Intent(getActivity(), SnapLocation.class);
 						startActivity(intent);
 					}
