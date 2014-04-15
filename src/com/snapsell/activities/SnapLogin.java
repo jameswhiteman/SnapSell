@@ -1,20 +1,9 @@
 package com.snapsell.activities;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLConnection;
-
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class SnapLogin extends ActionBarActivity {
-
-	private static Button twitterLogin;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +64,6 @@ public class SnapLogin extends ActionBarActivity {
 				public void onClick(View v) {
 					try
 					{
-						//ServerCommunication comm = new ServerCommunication();
-						//comm.execute("hey");
-						LoginTask login = new LoginTask();
-						login.execute();
 						Intent intent = new Intent(getActivity(), SnapLocation.class);
 						startActivity(intent);
 					}

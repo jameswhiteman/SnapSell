@@ -11,12 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.GridView;
 import android.widget.Switch;
 import android.widget.TextView;
 
-public class SnapCategories extends ActionBarActivity {
-
+public class SnapCategories extends ActionBarActivity
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +56,9 @@ public class SnapCategories extends ActionBarActivity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-
+    	
+    	private boolean selling = false;
+    	
         public PlaceholderFragment() {
         }
 
@@ -67,6 +71,8 @@ public class SnapCategories extends ActionBarActivity {
         	Switch buy = (Switch)rootView.findViewById(R.id.categoriesSwitchBuy);
         	buy.setTextOff("Buy");
         	buy.setTextOn("Sell");
+        	OnCheckedChangeListener listener = new CustomCheckedChangeListener();
+        	buy.setOnCheckedChangeListener(listener);
 			
 			// Set up the grid view
 			GridView gridView = (GridView)rootView.findViewById(R.id.categoriesGridOptions);
@@ -77,14 +83,30 @@ public class SnapCategories extends ActionBarActivity {
 				{
 					TextView text = (TextView)v.findViewById(R.id.gridItemCategoryTextTitle);
 					String i = text.getTag().toString();
-					Intent intent = new Intent(getActivity(), SnapListings.class);
-					intent.putExtra("option", i);
-					startActivity(intent);
+					if (selling)
+					{
+						Intent intent = new Intent(getActivity(), SnapListings.class);
+						intent.putExtra("option", i);
+						startActivity(intent);
+					}
+					else
+					{
+						Intent intent = new Intent(getActivity(), SnapSell.class);
+						intent.putExtra("option", i);
+						startActivity(intent);
+						System.out.println("SELLING");
+					}
 				}
 			});
 			
 			return rootView;
         }
+        
+        public class CustomCheckedChangeListener implements OnCheckedChangeListener
+        {
+        	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                selling = isChecked;
+            }
+        }
     }
-
 }

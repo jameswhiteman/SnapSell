@@ -1011,7 +1011,7 @@ containing a value of this type.
         public static final int categoriesSwitchBuy=0x7f05003c;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
-        public static final int container=0x7f050047;
+        public static final int container=0x7f05004d;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
@@ -1020,10 +1020,10 @@ containing a value of this type.
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int gridItemCategoryImageMain=0x7f050043;
-        public static final int gridItemCategoryTextTitle=0x7f050044;
-        public static final int gridItemListingImageMain=0x7f050045;
-        public static final int gridItemListingTextTitle=0x7f050046;
+        public static final int gridItemCategoryImageMain=0x7f050049;
+        public static final int gridItemCategoryTextTitle=0x7f05004a;
+        public static final int gridItemListingImageMain=0x7f05004b;
+        public static final int gridItemListingTextTitle=0x7f05004c;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
@@ -1031,11 +1031,13 @@ containing a value of this type.
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
-        public static final int listingTextInstruction=0x7f05003e;
-        public static final int listingsGridOptions=0x7f05003f;
-        public static final int locationButtonDone=0x7f050040;
-        public static final int loginButtonTwitter=0x7f050041;
-        public static final int menuLoginSettings=0x7f050048;
+        public static final int listingImageMain=0x7f05003e;
+        public static final int listingTextDescription=0x7f050040;
+        public static final int listingTextTitle=0x7f05003f;
+        public static final int listingsGridOptions=0x7f050041;
+        public static final int locationButtonDone=0x7f050042;
+        public static final int loginButtonTwitter=0x7f050043;
+        public static final int menuLoginSettings=0x7f05004f;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
@@ -1053,7 +1055,11 @@ containing a value of this type.
         public static final int search_plate=0x7f050036;
         public static final int search_src_text=0x7f050037;
         public static final int search_voice_btn=0x7f05003b;
-        public static final int sellTextInstruction=0x7f050042;
+        public static final int sellButtonCamera=0x7f050045;
+        public static final int sellButtonPost=0x7f050048;
+        public static final int sellInputDescription=0x7f050047;
+        public static final int sellInputTitle=0x7f050046;
+        public static final int sellTextInstruction=0x7f050044;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
@@ -1063,6 +1069,7 @@ containing a value of this type.
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
+        public static final int twitterWebview=0x7f05004e;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1130,7 +1137,8 @@ containing a value of this type.
         public static final int layout_location=0x7f030022;
         public static final int layout_login=0x7f030023;
         public static final int layout_sell=0x7f030024;
-        public static final int support_simple_spinner_dropdown_item=0x7f030025;
+        public static final int layout_twitter_web_view=0x7f030025;
+        public static final int support_simple_spinner_dropdown_item=0x7f030026;
     }
     public static final class menu {
         public static final int snap_login=0x7f0c0000;

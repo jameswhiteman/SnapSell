@@ -69,7 +69,7 @@ public class SnapListings extends ActionBarActivity {
 						int position, long id)
 				{
 					TextView text = (TextView)v.findViewById(R.id.gridItemListingTextTitle);
-					String i = text.getTag().toString();
+					int i = Integer.parseInt(text.getTag().toString());
 					Intent intent = new Intent(getActivity(), SnapListing.class);
 					intent.putExtra("listing", i);
 					startActivity(intent);

@@ -14,6 +14,40 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Item Details" />
+        android:text="Item Details:" />
+    
+    <Button 
+        android:id="@+id/sellButtonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sellTextInstruction"
+        android:text="Camera"/>
+    
+    <EditText
+        android:hint="Title"
+        android:inputType="text"
+        android:id="@+id/sellInputTitle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sellButtonCamera" />
+    
+    <EditText 
+        android:hint="Description"
+        android:inputType="text"
+        android:id="@+id/sellInputDescription"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sellInputTitle" />
+    
+    <Button
+        android:id="@+id/sellButtonPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sellInputDescription"
+        android:text="Submit" />
 
 </RelativeLayout>

@@ -8,12 +8,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.snapsell.activities.SnapListing$PlaceholderFragment" >
 
-    <TextView
-        android:id="@+id/listingTextInstruction"
+    <ImageView
+        android:id="@+id/listingImageMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Listing Screen" />
+        android:layout_alignParentTop="true" />
+    
+    <TextView
+        android:id="@+id/listingTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listingImageMain"
+        android:text="FUCK THE POLICE" />
+    
+    <TextView
+        android:id="@+id/listingTextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listingTextTitle" />
+    
+    
 
 </RelativeLayout>

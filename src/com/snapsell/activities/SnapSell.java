@@ -1,16 +1,25 @@
 package com.snapsell.activities;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class SnapSell extends ActionBarActivity {
 
+	private String title;
+	private String description;
+	private Bitmap picture;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +52,14 @@ public class SnapSell extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+        }
+    }
 
     /**
      * A placeholder fragment containing a simple view.
@@ -56,6 +73,25 @@ public class SnapSell extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
         	View rootView = inflater.inflate(R.layout.fragment_sell, container, false);
+        	Button camera = (Button)rootView.findViewById(R.id.sellButtonCamera);
+        	camera.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				    if (takePictureIntent.resolveActivity(
+				    		view.getContext().getPackageManager()) != null) {
+				        startActivityForResult(takePictureIntent, 1);
+				    }
+				}
+        	});
+        	Button done = (Button)rootView.findViewById(R.id.sellButtonPost);
+        	done.setOnClickListener(new OnClickListener() {
+        		@Override
+        		public void onClick(View view) {
+        			// POST IT
+        		}
+        	});
+        	
 			return rootView;
         }
     }

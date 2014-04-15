@@ -4,12 +4,15 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-feature android:name="android.hardware.camera"
+                  android:required="true" />
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -45,7 +48,8 @@
         <!-- Listing Activity -->
         <activity
             android:name="com.snapsell.activities.SnapListing"
-            android:label="@string/activityListing" />
+            android:label="@string/activityListing">
+         </activity>
         
         <!-- Selling Activity -->
         <activity
@@ -57,6 +61,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.snapsell.activities.SnapLogin" />
         </activity> -->
+        
+        <activity android:name=".TwitterWebView" ></activity>
     </application>
 
 </manifest>

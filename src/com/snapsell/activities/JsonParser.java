@@ -44,14 +44,16 @@ public class JsonParser
 			String id = rawListing.getString("_id");
 			String rawImage = rawListing.getString("picture");
 			Bitmap image = parseImage(rawImage);
-			String rawUser = rawListing.getString("user");
-			User user = parseUser(rawUser);
-			String title = rawListing.getString("title");
-			String description = rawListing.getString("description");
-			String rawMessages = rawListing.getString("message");
+			//String rawUser = rawListing.getString("user");
+			//User user = parseUser(rawUser);
+//			String title = rawListing.getString("title");
+//			String description = rawListing.getString("description");
+			String title = "Poop";
+			String description = "A gooey substance you don't wanna touch.";
+			String rawMessages = rawListing.getString("messages");
 			boolean bought = rawListing.getBoolean("bought");
 			List<Message> messages = parseMessages(rawMessages);
-			listing = new Listing(id, title, description, image, user, bought, messages);
+			listing = new Listing(id, title, description, image, null, bought, messages);
 		}
 		catch (JSONException e)
 		{
